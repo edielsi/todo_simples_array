@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="boot.css" rel="stylesheet">
+    <link href="united.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+    <!-- mensagens de alert -->
+    <div class="row d-none" id="mensagens">
+        <div class="col">
+            <div class="alert alert-danger">Cadastro incorreto</div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                    </tr>
+                </thead>
+
+                <tbody id="lista">
+                    <tr>
+                        <td>isleide</td>
+                        <td>isleide</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <form>
+                <input type="text" class="form-control" id="nome">
+                <button type="submit" class="btn btn-primary" id="btn_cadastrar">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="boot.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
