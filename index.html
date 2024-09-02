@@ -7,47 +7,85 @@
     <title>Document</title>
 
     <link href="boot.css" rel="stylesheet">
-    <link href="united.min.css" rel="stylesheet">
+    <!-- <link href="united.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
 <body>
 
-<div class="container">
-    <!-- mensagens de alert -->
-    <div class="row d-none" id="mensagens">
-        <div class="col">
-            <div class="alert alert-danger">Cadastro incorreto</div>
+    <div class="container">
+        <!-- mensagens de alert -->
+        <div class="row d-none" id="mensagens">
+            <div class="col">
+                <div class="alert alert-danger">Cadastro incorreto</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th>NOME</th>
+                            <th>TELEFONE</th>
+                            <th>EMAIL</th>
+                            <th>GENERO</th>
+                            <th>DT</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="lista">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5">
+                <form>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome">
+                    <!-- campos novos -->
+                    <input type="tel" class="form-control" id="telefone" placeholder="Fone">
+
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+
+                    <select class="form-select" id="genero">
+                        <option>M</option>
+                        <option selected>F</option>
+                    </select>
+
+
+                    <input type="date" class="form-control" id="dt_nasc">
+
+                    <button type="submit" class="btn btn-primary" id="btn_cadastrar">Salvar</button>
+
+                    <input type="hidden" name="id_tmp" id="id_tmp">
+                </form>
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card mt-3">
+                            <h5 class="card-header">Proporção</h5>
+                            <div class="card-body">
+
+                                <!-- grafico google -->
+                                <div id="donutchart"></div>
+                                <!-- fim grafico google -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
     </div>
-    
-    <div class="row">
-        <div class="col-md-8">
-            <table class="table table-striped table-sm">
-                <thead>
-                    <tr>
-                        <th>NOME</th>
-                    </tr>
-                </thead>
 
-                <tbody id="lista">
-                    <tr>
-                        <td>isleide</td>
-                        <td>isleide</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-md-4">
-            <form>
-                <input type="text" class="form-control" id="nome">
-                <button type="submit" class="btn btn-primary" id="btn_cadastrar">Cadastrar</button>
-            </form>
-        </div>
-    </div>
-</div>
-
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="boot.js"></script>
     <script src="index.js"></script>
 </body>
